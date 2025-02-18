@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --background: #ffffff;
@@ -18,4 +21,14 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    background: linear-gradient(90deg, #000 0%, #fff 100%);
+    box-shadow: 1px 2px 3px 1px rgba(253, 253, 253, 0.936);
+}
+.header-title{
+    font-family: "Sigmar", serif;
+    text-shadow:2px 3px 5px rgba(0,0,0,0.35);
+    font-size: 20px;
 }
