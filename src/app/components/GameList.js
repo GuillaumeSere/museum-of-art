@@ -54,11 +54,11 @@ const GameList = () => {
             <p className="text-lg font-semibold">Aucune image principale disponible pour cet objet ID</p>
           )}
           <p className="text-lg font-semibold">{objectData.title}</p>
-          <p className="text-sm text-white">{objectData.artistDisplayName}</p>
-          <p className="text-sm text-white">{objectData.country}</p>
-          <p className="text-sm text-white">{objectData.creditLine}</p>
-          <p className="text-sm text-white">{objectData.culture}</p>
-          <p className="text-sm text-white">{objectData.department}</p>
+          <p className="text-sm text-black">{objectData.artistDisplayName}</p>
+          <p className="text-sm text-black">{objectData.country}</p>
+          <p className="text-sm text-black">{objectData.creditLine}</p>
+          <p className="text-sm text-black">{objectData.culture}</p>
+          <p className="text-sm text-black">{objectData.department}</p>
          <a href={objectData.artistWikidata_URL} target="_blank" className='text-green-500'>En savoir plus sur l'artiste</a>
           {objectData.additionalImages && objectData.additionalImages.length > 0 ? (
             <div className="flex flex-wrap">
