@@ -2,21 +2,21 @@ import React from 'react'
 
 const Description = () => {
     return (
-        <div className='max-w-2xl mx-auto mb-5'>
-            <p className='mb-5'>
+        <div className='description max-w-2xl mx-auto mb-5'>
+            <p className='mb-5 text-black'>
                 Le <span className='text-blue-500'>Metropolitan Museum of Art</span> présente plus de 5 000 ans d'art du monde entier,
                 à découvrir et à apprécier par tous. Le musée est installé dans deux sites
                 emblématiques de New York : le Met Fifth Avenue et les Met Cloisters.
                 Des millions de personnes participent également à l'expérience du Met en ligne.
             </p>
-            <p className='mb-5'>
+            <p className='mb-5 text-black'>
                 Depuis sa fondation en 1870, le Met a toujours aspiré à être plus qu'un
                 simple trésor d'objets rares et magnifiques. Chaque jour, l'art prend
                 vie dans les galeries du musée et à travers ses expositions et événements,
                 révélant à la fois de nouvelles idées et des connexions inattendues
                 à travers le temps et les cultures.
             </p>
-            <p className='mb-5'>
+            <p className='mb-5 text-black'>
                 Le Metropolitan Museum of Art fournit des ensembles de données sélectionnés
                 contenant des informations sur plus de 470 000 œuvres d'art de sa collection
                 pour une utilisation commerciale et non commerciale sans restriction.

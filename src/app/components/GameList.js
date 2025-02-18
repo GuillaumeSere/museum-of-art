@@ -28,8 +28,8 @@ const GameList = () => {
   };
 
   return (
-    <div className='max-w-2xl mx-auto'>
-      <h2 className="text-lg font-bold">Recherche d'Oeuvres d'art (entrez un terme)</h2>
+    <div className='description max-w-2xl mx-auto'>
+      <h2 className="text-lg font-bold text-black">Recherche d'Oeuvres d'art (entrez un terme)</h2>
       <input
         type="text"
         value={searchTerm}
@@ -45,7 +45,7 @@ const GameList = () => {
         Rechercher
       </button>
       {objectData ? (
-        <div>
+        <div className='description'>
           {objectData.primaryImage ? (
             <a href={objectData.primaryImage} target="_blank" rel="noopener noreferrer">
               <img src={objectData.primaryImage} alt="Image principale" className="max-w-2xs mb-4" />
@@ -59,7 +59,7 @@ const GameList = () => {
           <p className="text-sm text-white">{objectData.creditLine}</p>
           <p className="text-sm text-white">{objectData.culture}</p>
           <p className="text-sm text-white">{objectData.department}</p>
-         <a href={objectData.artistWikidata_URL} target="_blank" className='text-blue-500'>En savoir plus sur l'artiste</a>
+         <a href={objectData.artistWikidata_URL} target="_blank" className='text-green-500'>En savoir plus sur l'artiste</a>
           {objectData.additionalImages && objectData.additionalImages.length > 0 ? (
             <div className="flex flex-wrap">
               {objectData.additionalImages.map((image, index) => (
