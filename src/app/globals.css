@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #06433d;
     --foreground: #ededed;
   }
 }
@@ -24,8 +24,8 @@ body {
 }
 
 .header{
-    background: linear-gradient(90deg, #000 0%, #fff 100%);
-    box-shadow: 1px 2px 3px 1px rgba(253, 253, 253, 0.936);
+    background: linear-gradient(90deg, #044c39 0%, #7be2c0 100%);
+    box-shadow: 1px 1px 1px rgba(253, 253, 253, 0.936);
 }
 .header-title{
     font-family: "Sigmar", serif;
