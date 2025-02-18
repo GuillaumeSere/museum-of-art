@@ -2,7 +2,7 @@
 
 import React from 'react';
 import GameList from './components/GameList';
-import Header from './components/Header';
+import Header from './components/header';
 import Description from './components/Description';
 import Footer from './components/Footer';
 
