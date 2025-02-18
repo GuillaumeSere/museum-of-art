@@ -2,8 +2,9 @@
 
 import React from 'react';
 import GameList from './components/GameList';
-import Header from './components/header';
+import Header from './components/Header';
 import Description from './components/Description';
+import Footer from './components/Footer';
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 <Description />
                 <GameList />
             </div>
+            <Footer />
         </>
     );
 }

@@ -40,3 +40,22 @@ body {
     border-radius: 10px;
     padding: 20px;
 }
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #044c39 0%, #7be2c0 100%);
+}
+.link{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin: 1rem;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p{
+    color: rgb(0, 0, 0);
+}
