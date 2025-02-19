@@ -42,7 +42,7 @@ const GameList = () => {
                 onKeyDown={handleKeyDown}
                 minLength={3}
             />
-            {searchTerm.length < 3 && <p className="text-red-500 text-sm mb-4">Veuillez entrer au moins 3 caractères.</p>}
+            {searchTerm.length < 3 && <p className="text-red-500 text-sm mb-4">Veuillez entrer au moins 3 caractères ou 1 chiffres.</p>}
             <button
                 onClick={handleSearch}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-4 rounded"
@@ -61,11 +61,12 @@ const GameList = () => {
                         <p className="text-lg font-semibold text-red-500">Aucune image principale disponible pour cet objet ID</p>
                     )}
                     <p className="text-lg font-semibold">{objectData.title}</p>
-                    <p className="text-sm text-black">{objectData.artistDisplayName}</p>
-                    <p className="text-sm text-black">{objectData.country}</p>
+                    <p className="text-sm text-black">Artiste: {objectData.artistDisplayName}</p>
+                    <p className="text-sm text-black">Ville: {objectData.country}</p>
                     <p className="text-sm text-black">{objectData.creditLine}</p>
-                    <p className="text-sm text-black">{objectData.culture}</p>
-                    <p className="text-sm text-black">{objectData.department}</p>
+                    <p className="text-sm text-black">Culture: {objectData.culture}</p>
+                    <p className="text-sm text-black">Département: {objectData.department}</p>
+                    <p className="text-sm text-black">Date de l'objet: {objectData.objectDate}</p>
                     <a href={objectData.artistWikidata_URL} target="_blank" className='text-green-500'>En savoir plus sur l'artiste</a>
                     {objectData.additionalImages && objectData.additionalImages.length > 0 ? (
                         <div className="flex flex-wrap">
