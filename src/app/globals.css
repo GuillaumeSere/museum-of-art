@@ -51,6 +51,9 @@ body {
     border-radius: 10px;
     padding: 20px;
 }
+.container{
+    min-height: 100vh;
+}
 .footer{
     display: flex;
     justify-content: center;
