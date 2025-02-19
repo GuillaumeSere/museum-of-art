@@ -32,7 +32,7 @@ const GameList = () => {
     };
     return (
         <div className='description max-w-2xl mx-auto'>
-            <h2 className="text-lg font-bold text-black">Recherche d'Oeuvres d'art (entrez un terme comme Rome, Louis ou un numéro)</h2>
+            <h2 className="text-lg font-bold text-black">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
             <input
                 type="text"
                 value={searchTerm}
