@@ -71,7 +71,7 @@ const GameList = () => {
 
     return (
         <div className='description w-full mx-auto'>
-            <h2 className="text-lg font-bold text-black mb-4">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
+            <h2 className="text-black mb-4">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
             <input
                 type="text"
                 value={searchTerm}
