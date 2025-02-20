@@ -108,7 +108,7 @@ const GameList = () => {
                     <p className="text-sm text-black">Culture: {objectData.culture}</p>
                     <p className="text-sm text-black">Département: {objectData.department}</p>
                     <p className="text-sm text-black">Date de l'objet: {objectData.objectDate}</p>
-                    <a href={objectData.artistWikidata_URL} target="_blank" className='text-green-500'>En savoir plus sur l'artiste</a>
+                    <a href={objectData.artistWikidata_URL} target="_blank" className='text-blue-500'>En savoir plus sur l'artiste</a>
                     {objectData.additionalImages && objectData.additionalImages.length > 0 ? (
                         <div className="flex flex-wrap">
                             {objectData.additionalImages.map((image, index) => (
