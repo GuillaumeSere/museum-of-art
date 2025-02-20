@@ -2,7 +2,7 @@ import React from 'react'
 
 const Description = () => {
     return (
-        <div className='description max-w-1xl mx-auto mb-5'>
+        <div className='description max-w-1xl mx-auto mt-20 mb-5'>
             <p className='mb-5 text-black'>
                 Le <span className='text-blue-500'>Metropolitan Museum of Art</span> présente plus de 5 000 ans d'art du monde entier,
                 à découvrir et à apprécier par tous. Le musée est installé dans deux sites
