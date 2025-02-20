@@ -9,10 +9,10 @@ const SuggestionsList = ({ suggestions, onSuggestionClick }) => {
             {suggestions.map((suggestion, index) => (
                 <li 
                     key={index} 
-                    className="p-2 text-black hover:text-green-500 hover:bg-gray-100 hover:rounded-md cursor-pointer"
+                    className="p-2 text-black hover:text-green-500 hover:bg-gray-100 hover:rounded-md55 cursor-pointer"
                     onClick={() => onSuggestionClick(suggestion)}
                 >
-                    {suggestion.title} - {suggestion.artistDisplayName}
+                   ✔️ {suggestion.title} - {suggestion.artistDisplayName}
                 </li>
             ))}
         </ul>
