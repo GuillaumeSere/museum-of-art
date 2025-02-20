@@ -5,6 +5,7 @@ import GameList from './components/GameList';
 import Header from './components/header';
 import Description from './components/Description';
 import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
                 <Description />
                 <GameList />
             </div>
+            <ScrollToTopButton />
             <Footer />
         </>
     );
