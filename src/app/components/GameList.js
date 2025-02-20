@@ -70,7 +70,7 @@ const GameList = () => {
     }, [searchTerm]);
 
     return (
-        <div className='description max-w-2xl mx-auto'>
+        <div className='description w-full mx-auto'>
             <h2 className="text-lg font-bold text-black">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
             <input
                 type="text"
@@ -84,7 +84,7 @@ const GameList = () => {
             {searchTerm.length < 3 && <p className="text-red-500 text-sm mb-4">Veuillez entrer au moins 3 caractères ou 1 chiffres.</p>}
             <button
                 onClick={handleSearch}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-4 rounded"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-full py-2 px-4 mb-4 rounded cursor-pointer"
                 disabled={searchTerm.length < 3}
             >
                 Rechercher
