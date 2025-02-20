@@ -32,13 +32,13 @@ body {
     background: #ffffff;
 }
 ::-webkit-scrollbar-thumb{
-    background: #7be2c0;
+    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
     border-radius: 15px;
 }
 
 .header{
-    background: linear-gradient(90deg, #044c39 0%, #7be2c0 100%);
-    box-shadow: 1px 1px 1px rgba(253, 253, 253, 0.936);
+    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
+    box-shadow:3px 0.5px 1px rgba(253, 253, 253, 0.936);
 }
 .header-title{
     font-family: "Sigmar", serif;
@@ -61,7 +61,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #044c39 0%, #7be2c0 100%);
+    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
+    box-shadow:1px 1px 3px 1px rgba(253, 253, 253, 0.936);
 }
 .link{
     color: rgb(0, 0, 0);
