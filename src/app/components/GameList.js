@@ -103,7 +103,7 @@ const GameList = () => {
                     <p className="text-lg font-semibold">{objectData.title}</p>
                     <p className="text-sm text-black">Artiste: {objectData.artistDisplayName}</p>
                     <p className="text-sm text-black">Ville: {objectData.country}</p>
-                    <p className="text-sm text-black">{objectData.creditLine}</p>
+                    <p className="text-sm text-black">Description: {objectData.creditLine}</p>
                     <p className="text-sm text-black">Culture: {objectData.culture}</p>
                     <p className="text-sm text-black">Département: {objectData.department}</p>
                     <p className="text-sm text-black">Date de l'objet: {objectData.objectDate}</p>
