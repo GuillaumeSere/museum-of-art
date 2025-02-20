@@ -45,6 +45,9 @@ body {
     text-shadow:2px 3px 5px rgba(0,0,0,0.35);
     font-size: 20px;
 }
+.list{
+    background: #6b6b6b7e;
+}
 .description{
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);

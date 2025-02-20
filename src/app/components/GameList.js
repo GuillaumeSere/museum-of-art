@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import SuggestionsList from './SuggestionsList';
 
 const GameList = () => {
     const [searchTerm, setSearchTerm] = useState(''); // champ de recherche pour le terme
     const [objectData, setObjectData] = useState(null);
     const [errorMessage, setErrorMessage] = useState(''); // message d'erreur pour l'objectId inexistant
+    const [suggestions, setSuggestions] = useState([]); // Nouvel état pour les suggestions
 
     const handleSearch = async () => {
         setErrorMessage(''); // Réinitialisation du message d'erreur avant chaque recherche
+        setSuggestions([]); // Réinitialiser les suggestions avant chaque recherche
         try {
             const response = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=${searchTerm}`);
             if (response.data.objectIDs.length > 0) {
@@ -19,6 +22,16 @@ const GameList = () => {
                 console.log('Aucun objet trouvé avec ce terme de recherche.');
                 setErrorMessage('Aucun objet trouvé avec ce terme de recherche. Veuillez essayer une nouvelle recherche.'); // Message d'erreur si aucun objet trouvé
             }
+
+            // Récupérer les suggestions d'œuvres d'art
+            const suggestionsResponse = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=${searchTerm}`);
+            const suggestionsData = await Promise.all(
+                suggestionsResponse.data.objectIDs.slice(0, 5).map(async (id) => {
+                    const detailResponse = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
+                    return detailResponse.data;
+                })
+            );
+            setSuggestions(suggestionsData); // Mettre à jour l'état des suggestions
         } catch (error) {
             console.error('Erreur lors de la récupération des données:', error);
             setErrorMessage('Erreur lors de la récupération des données. Veuillez essayer une nouvelle recherche.'); // Message d'erreur en cas d'erreur de récupération
@@ -30,6 +43,11 @@ const GameList = () => {
             handleSearch();
         }
     };
+
+    const handleSuggestionClick = (suggestion) => {
+        setObjectData(suggestion); // Mettre à jour l'état avec les données de la suggestion cliquée
+    };
+
     return (
         <div className='description max-w-2xl mx-auto'>
             <h2 className="text-lg font-bold text-black">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
@@ -38,7 +56,7 @@ const GameList = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Entrer un terme de recherche (minimum 3 caractères)"
-                className="w-full p-2 mb-4 border border-gray-400 text-black"
+                className="w-full p-2 mb-4 border border-gray-400 text-black rounded-md"
                 onKeyDown={handleKeyDown}
                 minLength={3}
             />
@@ -50,7 +68,8 @@ const GameList = () => {
             >
                 Rechercher
             </button>
-            {errorMessage && <p className="text-red-500 text-sm mb-4">{errorMessage}</p>} 
+            {errorMessage && <p className="text-red-500 text-sm mb-4">{errorMessage}</p>}
+            <SuggestionsList suggestions={suggestions} onSuggestionClick={handleSuggestionClick} />
             {objectData ? (
                 <div className='description'>
                     {objectData.primaryImage ? (
