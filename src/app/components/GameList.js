@@ -100,7 +100,7 @@ const GameList = () => {
                     ) : (
                         <p className="text-lg font-semibold text-red-500">Aucune image principale disponible pour cet objet ID</p>
                     )}
-                    <p className="text-lg font-semibold">{objectData.title}</p>
+                    <p className="header-title">{objectData.title}</p>
                     <p className="text-sm text-black">Artiste: {objectData.artistDisplayName}</p>
                     <p className="text-sm text-black">Ville: {objectData.country}</p>
                     <p className="text-sm text-black">Dimensions: {objectData.dimensions}</p>
