@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SuggestionsList from './SuggestionsList';
 
@@ -47,6 +47,27 @@ const GameList = () => {
     const handleSuggestionClick = (suggestion) => {
         setObjectData(suggestion); // Mettre à jour l'état avec les données de la suggestion cliquée
     };
+
+    useEffect(() => {
+        const fetchSuggestions = async () => {
+            if (searchTerm.length >= 3) {
+                try {
+                    const response = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=${searchTerm}`);
+                    const suggestionsData = await Promise.all(
+                        response.data.objectIDs.slice(0, 5).map(async (id) => {
+                            const detailResponse = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
+                            return detailResponse.data;
+                        })
+                    );
+                    setSuggestions(suggestionsData); // Mettre à jour l'état des suggestions
+                } catch (error) {
+                    console.error('Erreur lors de la récupération des suggestions:', error);
+                }
+            }
+        };
+
+        fetchSuggestions();
+    }, [searchTerm]);
 
     return (
         <div className='description max-w-2xl mx-auto'>
