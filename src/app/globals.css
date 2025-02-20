@@ -66,8 +66,10 @@ body {
 }
 .link{
     color: rgb(0, 0, 0);
-    font-size: 30px;
-    margin: 1rem;
+    font-size: 28px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 0.3rem;
 }
 .footer-links{
     display: flex;
