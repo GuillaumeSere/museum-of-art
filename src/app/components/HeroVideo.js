@@ -52,7 +52,7 @@ const HeroVideo = () => {
         <source src={videoData[currentVideoIndex].src} type="video/mp4" />
         Votre navigateur ne supporte pas la lecture de vidéos.
       </video>
-      <div className="absolute container mx-auto inset-0 bg-black/30">
+      <div className="absolute container mx-auto inset-0">
         {/* Overlay optionnel pour améliorer la lisibilité du texte si nécessaire */}
         <Description />
       </div>
