@@ -42,16 +42,16 @@ h2{
 }
 
 .header{
-    background-color: #b29660;
+    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
     box-shadow:3px 0.5px 1px rgba(253, 253, 253, 0.936);
 }
 .header-title{
     font-family: "Sigmar", serif;
-    text-shadow:2px 3px 5px rgba(0,0,0,0.35);
     font-size: 25px;
     transform: skewX(-15deg);
     letter-spacing: 5px;
     text-transform: uppercase;
+    color: rgb(0, 0, 0);
 }
 .video{
     height: 300px;
@@ -73,7 +73,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b29660;
+    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
     box-shadow:1px 1px 3px 1px rgba(253, 253, 253, 0.936);
 }
 .link{
