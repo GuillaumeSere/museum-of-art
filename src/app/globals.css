@@ -53,6 +53,12 @@ h2{
     transform: skewX(-15deg);
     letter-spacing: 5px;
 }
+.video-box{
+    margin-bottom: -40rem;
+}
+.video{
+    height: 300px;
+}
 .list{
     background: #6b6b6b7e;
 }
