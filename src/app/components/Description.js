@@ -2,8 +2,8 @@ import React from 'react'
 
 const Description = () => {
     return (
-        <div className='max-w-1xl flex justify-center flex-wrap items-center mt-20 mb-5'>
-            <p className='description mb-5 max-w-80  text-black font-semibold'>
+        <div className='container-description max-w-1xl flex justify-center flex-wrap items-center mt-20 mb-5 px-4'>
+            <p className='description max-w-80  text-black font-semibold'>
                 Le <span className='text-green-500'>Metropolitan Museum of Art</span> présente plus de 5 000 ans d'art du monde entier,
                 à découvrir et à apprécier par tous. Le musée est installé dans deux sites
                 emblématiques de New York : le Met Fifth Avenue et les Met Cloisters.
@@ -20,7 +20,7 @@ const Description = () => {
                 révélant à la fois de nouvelles idées et des connexions inattendues
                 à travers le temps et les cultures.
             </p>
-            <p className='description mb-5 max-w-80 text-black font-semibold'>
+            <p className='description max-w-80 text-black font-semibold'>
                 Les ensembles de données prennent en charge la recherche,
                 l'utilisation et l'interaction avec la collection du musée.
                 Le Metropolitan Museum of Art fournit des ensembles de données sélectionnés

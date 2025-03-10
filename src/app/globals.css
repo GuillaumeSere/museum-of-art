@@ -92,3 +92,43 @@ h2{
 p{
     color: rgb(0, 0, 0);
 }
+
+@media (max-width:1030px){
+    .header-title{
+        font-size: 20px;
+    }
+    .container-description{
+        margin-bottom: 50rem;
+        position: relative;
+        margin-top: 2rem;
+    }
+    .description{
+        max-width: 100% !important;
+        margin-top: 1rem;
+        font-size: 14px;
+    }
+    .descriptions{
+        margin-top: 1rem;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .video-box:nth-child(3){
+        display: none;
+    }
+}
+
+@media (max-width:530px){
+    .description:nth-child(2){
+       display: none;
+    }
+    .descriptions{
+        margin-top: 5rem;
+    }
+}
+
+@media(max-width: 340px){
+    .descriptions{
+        margin-top: 20rem;
+    }
+}
