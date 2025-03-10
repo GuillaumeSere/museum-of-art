@@ -38,6 +38,7 @@ h2{
     text-shadow:2px 3px 5px rgba(0,0,0,0.35);
     font-size: 20px;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .header{
@@ -50,6 +51,7 @@ h2{
     font-size: 25px;
     transform: skewX(-15deg);
     letter-spacing: 5px;
+    text-transform: uppercase;
 }
 .video{
     height: 300px;

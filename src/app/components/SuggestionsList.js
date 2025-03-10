@@ -5,7 +5,7 @@ const SuggestionsList = ({ suggestions, onSuggestionClick }) => {
 
     return (
         <ul className="list rounded-md shadow-md mb-5 mt-2">
-            <h2 className='text-black text-center from-neutral-500 mb-2 pt-2'>Suggestions</h2>
+            <h2 className='text-black text-center rounded-t-md bg-stone-500 pt-2 pb-2'>Suggestions</h2>
             {suggestions.map((suggestion, index) => (
                 <li 
                     key={index} 
