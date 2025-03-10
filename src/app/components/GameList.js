@@ -81,7 +81,7 @@ const GameList = () => {
                 onKeyDown={handleKeyDown}
                 minLength={3}
             />
-            {searchTerm.length < 3 && <p className="text-red-500 text-sm mb-4">Veuillez entrer au moins 3 caractères ou 1 chiffres.</p>}
+            {searchTerm.length < 3 && <p className="text-sm mb-4">Veuillez entrer au moins 3 caractères ou 1 chiffres.</p>}
             <button
                 onClick={handleSearch}
                 className="bg-stone-800 hover:bg-stone-700 text-white font-bold w-full py-2 px-4 mb-4 rounded cursor-pointer"

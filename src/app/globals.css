@@ -39,25 +39,32 @@ h2{
     font-family: "Sigmar", serif;
     text-shadow:2px 3px 5px rgba(0,0,0,0.35);
     font-size: 20px;
+    letter-spacing: 2px;
 }
 
 .header{
-    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
+     background: rgba(173, 174, 172, 0.904);
     box-shadow:3px 0.5px 1px rgba(253, 253, 253, 0.936);
 }
 .header-title{
     font-family: "Sigmar", serif;
     text-shadow:2px 3px 5px rgba(0,0,0,0.35);
     font-size: 25px;
+    transform: skewX(-15deg);
+    letter-spacing: 5px;
 }
 .list{
     background: #6b6b6b7e;
 }
 .description{
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(159, 164, 163, 0.495);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     padding: 20px;
+    line-height: 30px;
+}
+.description:nth-child(2){
+    background: rgba(173, 174, 172, 0.904);
 }
 .container{
     min-height: 100vh;
@@ -66,7 +73,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
+    background: rgba(173, 174, 172, 0.904);
     box-shadow:1px 1px 3px 1px rgba(253, 253, 253, 0.936);
 }
 .link{
