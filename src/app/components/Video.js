@@ -20,7 +20,7 @@ const videoData = [
 
 const Video = () => {
   return (
-    <section className="container video-box mx-auto px-4">
+    <section className="container video-box mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
         {videoData.map((video) => (
           <div 
