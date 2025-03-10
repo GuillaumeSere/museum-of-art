@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SuggestionsList from './SuggestionsList';
+import Video from './Video';
 
 const GameList = () => {
     const [searchTerm, setSearchTerm] = useState(''); // champ de recherche pour le terme
     const [objectData, setObjectData] = useState(null);
     const [errorMessage, setErrorMessage] = useState(''); // message d'erreur pour l'objectId inexistant
     const [suggestions, setSuggestions] = useState([]); // Nouvel état pour les suggestions
+    const [showVideo, setShowVideo] = useState(true); // Nouvel état pour afficher la vidéo
 
     const handleSearch = async () => {
         setErrorMessage(''); // Réinitialisation du message d'erreur avant chaque recherche
         setSuggestions([]); // Réinitialiser les suggestions avant chaque recherche
+        setShowVideo(false); // Cacher la vidéo avant chaque recherche
         try {
             const response = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=${searchTerm}`);
             if (response.data.objectIDs.length > 0) {
@@ -70,7 +73,7 @@ const GameList = () => {
     }, [searchTerm]);
 
     return (
-        <div className='descriptions w-full mx-auto'>
+        <div className='descriptions container px-4 py-8 w-full mx-auto'>
             <h2 className="text-black mb-4">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
             <input
                 type="text"
@@ -90,7 +93,7 @@ const GameList = () => {
                 Rechercher
             </button>
             {errorMessage && <p className="text-red-500 text-sm mb-4">{errorMessage}</p>}
-            <SuggestionsList suggestions={suggestions} onSuggestionClick={handleSuggestionClick} />
+            {showVideo ? <Video /> : <SuggestionsList suggestions={suggestions} onSuggestionClick={handleSuggestionClick} />}
             {objectData ? (
                 <div className='description'>
                     {objectData.primaryImage ? (

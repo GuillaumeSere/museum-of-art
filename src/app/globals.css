@@ -51,9 +51,6 @@ h2{
     transform: skewX(-15deg);
     letter-spacing: 5px;
 }
-.video-box{
-    margin-bottom: -40rem;
-}
 .video{
     height: 300px;
 }
@@ -129,6 +126,6 @@ p{
 
 @media(max-width: 340px){
     .descriptions{
-        margin-top: 20rem;
+        margin-top: 30rem;
     }
 }

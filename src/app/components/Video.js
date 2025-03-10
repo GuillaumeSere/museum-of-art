@@ -3,18 +3,18 @@ import React from 'react'
 const videoData = [
   {
     id: 1,
-    src: '/video/video1.mp4',
-    title: 'Vidéo 1',
+    src: '/video/video5.mp4',
+    title: 'Vidéo 5',
   },
   {
     id: 2,
-    src: '/video/video2.mp4',
-    title: 'Vidéo 2',
+    src: '/video/video6.mp4',
+    title: 'Vidéo 6',
   },
   {
     id: 3,
-    src: '/video/video3.mp4',
-    title: 'Vidéo 3',
+    src: '/video/video7.mp4',
+    title: 'Vidéo 7',
   },
 ]
 
@@ -25,7 +25,7 @@ const Video = () => {
         {videoData.map((video) => (
           <div 
             key={video.id}
-            className="rounded-lg overflow-hidden shadow-lg"
+            className="rounded overflow-hidden"
           >
             <video
               className="video w-full pt-4"
