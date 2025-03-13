@@ -124,6 +124,10 @@ p{
     .descriptions{
         margin-top: 5rem;
     }
+    .description{
+        line-height: 20px;
+        font-size: 13px;
+    }
 }
 
 @media(max-width: 340px){
