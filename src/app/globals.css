@@ -63,7 +63,7 @@ h2{
     background: rgba(159, 164, 163, 0.495);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     line-height: 30px;
 }
 .container{
