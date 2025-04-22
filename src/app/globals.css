@@ -42,7 +42,7 @@ h2{
 }
 
 .header{
-    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
+    background: black;
     box-shadow:3px 0.5px 1px rgba(253, 253, 253, 0.936);
 }
 .header-title{
@@ -51,7 +51,7 @@ h2{
     transform: skewX(-15deg);
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: rgb(0, 0, 0);
+    color: rgb(227, 227, 227);
 }
 .video{
     height: 300px;
@@ -66,6 +66,11 @@ h2{
     padding: 10px;
     line-height: 30px;
 }
+.descriptions{
+    background: url(../../public/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container{
     min-height: 100vh;
 }
@@ -73,11 +78,11 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #342b26 0%, #c7beaf 100%);
+    background: black;
     box-shadow:1px 1px 3px 1px rgba(253, 253, 253, 0.936);
 }
 .link{
-    color: rgb(0, 0, 0);
+    color: rgb(242, 242, 242);
     font-size: 28px;
     margin-right: 1rem;
     margin-left: 1rem;
@@ -89,7 +94,7 @@ h2{
     align-items: center;
 }
 p{
-    color: rgb(0, 0, 0);
+    color: rgb(237, 237, 237);
 }
 
 @media (max-width:1030px){

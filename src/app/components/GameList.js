@@ -73,18 +73,19 @@ const GameList = () => {
     }, [searchTerm]);
 
     return (
-        <div className='descriptions container px-4 py-8 w-full mx-auto'>
-            <h2 className="text-black mb-4">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
+        <div className='descriptions px-4 py-8 w-full'>
+            <div className="container mx-auto">
+            <h2 className="text-stone-200 mb-4">Recherche d'Oeuvres d'art (entrer un terme comme Rome, Louis ou un numéro)</h2>
             <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Entrer un terme de recherche (minimum 3 caractères)"
-                className="w-full p-2 mb-4 border border-gray-400 text-black rounded-md"
+                className="w-full mx-auto p-2 mb-4 border border-gray-400 text-black rounded-md"
                 onKeyDown={handleKeyDown}
                 minLength={3}
             />
-            {searchTerm.length < 3 && <p className="text-sm mb-4">Veuillez entrer au moins 3 caractères ou 1 chiffres.</p>}
+            {searchTerm.length < 3 && <p className=" text-white text-sm mb-4">Veuillez entrer au moins 3 caractères ou 1 chiffres.</p>}
             <button
                 onClick={handleSearch}
                 className="bg-stone-800 hover:bg-stone-700 text-white font-bold w-sm py-2 px-4 mb-4 rounded cursor-pointer"
@@ -104,13 +105,13 @@ const GameList = () => {
                         <p className="text-lg font-semibold text-red-500">Aucune image principale disponible pour cet objet ID</p>
                     )}
                     <p className="header-title">{objectData.title}</p>
-                    <p className="text-sm text-black">Artiste: {objectData.artistDisplayName}</p>
-                    <p className="text-sm text-black">Ville: {objectData.country}</p>
-                    <p className="text-sm text-black">Dimensions: {objectData.dimensions}</p>
-                    <p className="text-sm text-black">Description: {objectData.creditLine}</p>
-                    <p className="text-sm text-black">Culture: {objectData.culture}</p>
-                    <p className="text-sm text-black">Département: {objectData.department}</p>
-                    <p className="text-sm text-black">Date de l'objet: {objectData.objectDate}</p>
+                    <p className="text-sm text-stone-200">Artiste: {objectData.artistDisplayName}</p>
+                    <p className="text-sm text-stone-200">Ville: {objectData.country}</p>
+                    <p className="text-sm text-stone-200">Dimensions: {objectData.dimensions}</p>
+                    <p className="text-sm text-stone-200">Description: {objectData.creditLine}</p>
+                    <p className="text-sm text-stone-200">Culture: {objectData.culture}</p>
+                    <p className="text-sm text-stone-200">Département: {objectData.department}</p>
+                    <p className="text-sm text-stone-200">Date de l'objet: {objectData.objectDate}</p>
                     <a href={objectData.artistWikidata_URL} target="_blank" className='text-blue-500'>En savoir plus sur l'artiste</a>
                     {objectData.additionalImages && objectData.additionalImages.length > 0 ? (
                         <div className="flex flex-wrap">
@@ -125,6 +126,8 @@ const GameList = () => {
                     )}
                 </div>
             ) : null}
+            </div>
+          
         </div>
     );
 };
