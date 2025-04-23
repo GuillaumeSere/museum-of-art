@@ -67,7 +67,7 @@ h2{
     line-height: 30px;
 }
 .descriptions{
-    background: url(../../public/bg.png);
+    background: url(/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
