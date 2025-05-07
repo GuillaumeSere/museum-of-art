@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 const videoData = [
   {
@@ -18,28 +18,41 @@ const videoData = [
   },
 ]
 
-const Video = () => {
+const VideoItem = React.memo(({ video }) => {
   return (
-    <section className="container video-box mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-        {videoData.map((video) => (
-          <div 
-            key={video.id}
-            className="rounded overflow-hidden"
-          >
-            <video
-              className="video w-full pt-4"
-              autoPlay
-              muted
-              loop
-              preload="metadata"
-              aria-label={video.title}
-            >
-              <source src={video.src} type="video/mp4" />
-              Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
-          </div>
-        ))}
+    <div 
+      className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <video
+        className="w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-label={video.title}
+        loading="lazy"
+      >
+        <source src={video.src} type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
+  )
+})
+
+VideoItem.displayName = 'VideoItem'
+
+const Video = () => {
+  const memoizedVideos = useMemo(() => {
+    return videoData.map((video) => (
+      <VideoItem key={video.id} video={video} />
+    ))
+  }, [])
+
+  return (
+    <section className="container mx-auto py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {memoizedVideos}
       </div>
     </section>
   )
