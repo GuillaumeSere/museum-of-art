@@ -14,11 +14,42 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Metropolitan Museum Art, rechercher toutes les oeuvres d'art du monde entier",
   description: "retrouver toutes les oeuvres d'arts répertoriée au Metropolitan museum art",
+  verification: {
+    google: "nwVPqsKRGvHVh9v-Qn4QoawQzNbN99Sfg6usOSlUEhg",
+  },
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  openGraph: {
+    title: "Metropolitan Museum Art",
+    description: "retrouver toutes les oeuvres d'arts répertoriée au Metropolitan museum art",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fr">
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=votre-id-google-analytics"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'votre-id-google-analytics');
+            `,
+          }}
+        />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2999125530144516"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
