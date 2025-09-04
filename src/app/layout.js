@@ -12,6 +12,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://museum-of-art-seven.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Metropolitan Museum Art, rechercher toutes les oeuvres d'art du monde entier",
   description: "retrouver toutes les oeuvres d'arts répertoriée au Metropolitan museum art",
   verification: {
@@ -23,6 +27,7 @@ export const metadata = {
     title: "Metropolitan Museum Art",
     description: "retrouver toutes les oeuvres d'arts répertoriée au Metropolitan museum art",
     type: "website",
+    url: "https://museum-of-art-seven.vercel.app/",
   },
 };
 
@@ -30,6 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <head>
+        <link rel="canonical" href="https://museum-of-art-seven.vercel.app/" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=votre-id-google-analytics"
